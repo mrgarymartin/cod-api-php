@@ -1,0 +1,11 @@
+{
+    "name": "mrgarymartin/cod-api-php",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Gary Martin",
+            "email": "mrgarymartin@outlook.com"
+        }
+    ],
+    "require": {}
+}
