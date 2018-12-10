@@ -3,7 +3,6 @@ include_once('../vendor/autoload.php');
 
 use mrgarymartin\CODApi\CODApi;
 
-$username  = urlencode('MajorSausage#1805');
 $username  = urlencode('shroud#1882');
 $codApi = new CODApi();
 

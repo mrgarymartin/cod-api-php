@@ -6,81 +6,6 @@
 
 ` composer require mrgarymartin/cod-api-php `
 
-###### Get API Status
-
-```php
-CODApi::status()
-```
-
-###### Set Region
-
-```php
-CODApi::region('pc-na')
-```
-
-###### Filter by Player Names
-
-```php
-CODApi::region('pc-na')->players('shroud')->get();
-```
-
-###### Get Player Info
-
-```php
-CODApi::region('pc-eu')->player('<PLAYER_ID>')->get();
-```
-```php
-CODApi::region('pc-eu')->player('<PLAYER_NAME')->get();
-```
-###### Get Seasons
-
-```php
-CODApi::region('pc-eu')->seasons()->get();
-```
-
-###### Get Player Stats
-
-```php
-CODApi::region('pc-eu')->playerStats('<PLAYER_NAME')->get;
-```
-
-
-
-```php
-CODApi::region('pc-eu')->playerStats('<PLAYER_NAME')->get(); // Current Season by default 
-```
-
-```php
-CODApi::region('pc-eu')->playerStats('<PLAYER_NAME','SEASON_ID')->get;
-```
-
-```php
-CODApi::region('pc-eu')->playerStats('<PLAYER_NAME')->stat('duo-fpp');
-```
-
-```php
-CODApi::region('pc-eu')->playerStats('<PLAYER_NAME','<SEASON_ID>')->stat('duo-fpp');
-```
-
-###### Get Player Match IDs
-
-```php
-CODApi::region('pc-eu')->player('<PLAYER_NAME')->matches();
-```
-
-
-###### Filter by Match ID
-
-```php
-CODApi::region('pc-eu')->match('<MATCH_ID>')->get();
-```
-
-###### Pagination
-
-```php
-CODApi::region('pc-eu')->players('<PLAYER_ID1>','<PLAYER_ID2>','<PLAYER_ID3>')->limit(1)->offset(2)->get();
-```
-
 
 ### PHP
 
@@ -90,6 +15,26 @@ require_once 'vendor/autoload.php';
 
 $codApi = new \mrgarymartin\CODApi($data); 
 $codApi->region('pc-eu')->players('rkmaier,molnarz,Istvan92,zuuup,Aigialeusz')->get());
+
+// Get Profile Data
+$data = $codApi->getBO4Profile($username, ['type' => 'blackout']);
+
+// Get Blackout Matches Stats with time limits
+$data =  $codApi->blackout->getRawBlackoutMatchesStats($username,"2018-12-10","2018-12-11");
+
+// Get Raw Blackout Matches Stats
+$data =  $codApi->blackout->getRawBlackoutMatchesStats($username);
+
+// get Duo Blackout Stats
+$data =  $codApi->blackout->getDuoBlackoutStats($username);
+
+// get Quad Blackout Stats
+$data =  $codApi->blackout->getQuadBlackoutStats($username);
+
+// Get Solo Blackout Stats
+$data =  $codApi->blackout->getSoloBlackoutStats($username);
+
+
 
 ```
 
