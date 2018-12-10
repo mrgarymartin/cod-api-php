@@ -1,11 +1,22 @@
 {
-    "name": "mrgarymartin/cod-api-php",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Gary Martin",
-            "email": "mrgarymartin@outlook.com"
-        }
-    ],
-    "require": {}
+  "name": "mrgarymartin/cod-api-php",
+  "type": "library",
+  "description": "Call of Duty php API wrapper",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "mrgarymartin\\CODApi\\": "src/CODApi"
+    }
+  },
+  "authors": [
+    {
+      "name": "Gary Martin",
+      "email": "mrgarymartin@outlook.com"
+    }
+  ],
+  "require": {
+    "ext-json": "*",
+    "php": "^7.0",
+    "guzzlehttp/guzzle": "^6.3"
+  }
 }
