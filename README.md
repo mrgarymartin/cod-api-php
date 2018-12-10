@@ -1,6 +1,8 @@
 # A PHP Wrapper for the Call of Duty API
-[![Total Downloads](https://poser.pugx.org/rkmaier/pubgapi/downloads)](https://packagist.org/packages/rkmaier/pubgapi)
-[![License](https://poser.pugx.org/rkmaier/pubgapi/license)](https://packagist.org/packages/rkmaier/pubgapi)
+[![Total Downloads](https://poser.pugx.org/mrgarymartin/cod-api-php/downloads)](https://packagist.org/packages/mrgarymartin/cod-api-php)
+[![License](https://poser.pugx.org/mrgarymartin/cod-api-php/license)](https://packagist.org/packages/mrgarymartin/cod-api-php)
+[![Latest Stable Version](https://poser.pugx.org/mrgarymartin/cod-api-php/version)](https://packagist.org/packages/mrgarymartin/cod-api-php)
+
 
 ## Installation 
 
