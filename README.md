@@ -1,4 +1,6 @@
 # A PHP Wrapper for the Call of Duty API
+[![Total Downloads](https://poser.pugx.org/rkmaier/pubgapi/downloads)](https://packagist.org/packages/rkmaier/pubgapi)
+[![License](https://poser.pugx.org/rkmaier/pubgapi/license)](https://packagist.org/packages/rkmaier/pubgapi)
 
 ## Installation 
 
@@ -11,8 +13,7 @@
 
 require_once 'vendor/autoload.php'; 
 
-$codApi = new \mrgarymartin\CODApi($data); 
-$codApi->region('pc-eu')->players('rkmaier,molnarz,Istvan92,zuuup,Aigialeusz')->get());
+$codApi = new \mrgarymartin\CODApi($data);
 
 // Get Profile Data
 $data = $codApi->getBO4Profile($username, ['type' => 'blackout']);
